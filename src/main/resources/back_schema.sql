@@ -1,0 +1,60 @@
+-- CREATE SCHEMA IF NOT EXISTS SPACECRAFT;
+--
+-- CREATE TABLE SPACECRAFT.spacecraft_upgrade (
+--     id INT PRIMARY KEY,
+--     name VARCHAR(255) NOT NULL,
+--     upgrade_registry VARCHAR(255) NOT NULL,
+--     spacecraft_registry VARCHAR(255) NOT NULL,
+--     manufacturer VARCHAR(255) NOT NULL,
+--     price INT NOT NULL,
+--     type VARCHAR(255) NOT NULL,
+--     value INT NOT NULL,
+-- );
+
+-- create table spacecraft_stats
+-- (
+--     damage        integer not null,
+--     hull          integer not null,
+--     id            integer not null,
+--     manuvrability integer not null,
+--     shield        integer not null,
+--     speed         integer not null,
+--     primary key (id)
+-- )
+--
+--
+-- create table spacecraft_upgrade
+-- (
+--     id                  integer not null,
+--     price               integer not null,
+--     value               integer not null,
+--     manufacturer        varchar(255),
+--     name                varchar(255),
+--     spacecraft_registry varchar(255),
+--     upgrade_registry    varchar(255),
+--     type                enum ('DEFLECTOR','ENGINE','PLATING','STABILIZER','WEAPON'),
+--     primary key (id)
+-- )
+
+-- create table spacecrafts
+-- (
+--     base_stats_id       integer unique,
+--     height              integer not null,
+--     id                  integer not null,
+--     length              integer not null,
+--     manufactured        integer not null,
+--     price               integer not null,
+--     manufacturer        varchar(255),
+--     name                varchar(255),
+--     spacecraft_registry varchar(255),
+--     store_type          enum ('SPACECRAFT'),
+--     type                enum ('BOMBER','FIGHTER','INTERCEPTOR','SCOUT','SUPPORT'),
+--     primary key (id)
+-- )
+--
+-- create table users
+-- (
+--     id   integer not null,
+--     name varchar(255),
+--     primary key (id)
+-- )
