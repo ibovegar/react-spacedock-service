@@ -16,7 +16,10 @@ enum class StoreType {
 @Entity
 @Table(name = "spacecrafts")
 data class SpacecraftEntity(
-    @Id @GeneratedValue(strategy = GenerationType.AUTO) val id: Int?,
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    val id: Int?,
+
     val name: String,
     val spacecraftRegistry: String,
     val manufacturer: String,
@@ -24,10 +27,18 @@ data class SpacecraftEntity(
     val height: Int,
     val length: Int,
     val price: Int,
-    @Enumerated(value = EnumType.STRING) var type: SpacecraftType,
-    @Enumerated(value = EnumType.STRING) var storeType: StoreType,
+
+    @Enumerated(value = EnumType.STRING)
+    var type: SpacecraftType,
+
+    @Enumerated(value = EnumType.STRING)
+    var storeType: StoreType,
+
     @OneToOne
-    val baseStats: SpacecraftStatsEntity
+    val baseStats: SpacecraftStatsEntity,
+
+    @OneToMany(mappedBy = "spacecraft")
+    val userSpacerafts: List<UserSpacecraftEntity> = mutableListOf()
 )
 
 // TODO: Move to Spacecraft service

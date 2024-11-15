@@ -9,6 +9,9 @@ import jakarta.persistence.*
 data class UserEntity(
     @Id @GeneratedValue(strategy = GenerationType.AUTO) val id: Int?,
     val name: String,
+
+    @OneToMany(mappedBy = "user")
+    val userSpacerafts: List<UserSpacecraftEntity> = mutableListOf()
 )
 
 // TODO: Move to User service

@@ -14,7 +14,7 @@ data class SpacecraftDTO(
     val price: Int,
     val type: SpacecraftType,
     val storeType: StoreType,
-    val baseStats: SpacecraftStatsDTO
+    val baseStats: SpacecraftStatsDTO?
     //val attachedUpgrades: string[];
 )
 

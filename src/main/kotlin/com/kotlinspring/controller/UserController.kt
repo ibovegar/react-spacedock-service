@@ -9,9 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 @Validated
 class UserController(val userService: UserService) {
+    @GetMapping
+    fun getAllUsers(): List<UserDTO> =
+        userService.getAllUsers()
+
     @GetMapping("/{id}")
     fun getUserById(@PathVariable id: Int): UserDTO =
         userService.getUserById(id)

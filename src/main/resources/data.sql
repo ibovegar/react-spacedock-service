@@ -1,5 +1,6 @@
 INSERT INTO users (id, name) VALUES
-(1, 'John Doe');
+(1, 'John Doe'),
+(2, 'Jane Doe');
 
 INSERT INTO spacecraft_stats (id, speed, hull, shield, damage, manuvrability) VALUES
 (1, 10,  30,  80,  60,  80),
