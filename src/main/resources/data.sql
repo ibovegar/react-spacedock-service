@@ -2,19 +2,12 @@ INSERT INTO users (id, name) VALUES
 (1, 'John Doe'),
 (2, 'Jane Doe');
 
-INSERT INTO spacecraft_stats (id, speed, hull, shield, damage, manuvrability) VALUES
-(1, 10,  30,  80,  60,  80),
-(2, 60,  50,  10,  0,   50),
-(3, 100, 20,  10,  10,  30),
-(4, 30,  120, 110, 200, 10),
-(5, 60,  90,  80,  0,   10);
-
-INSERT INTO spacecrafts (id, name, spacecraft_registry, manufacturer, manufactured, height, length, price, type, store_type, base_stats_id) VALUES
-(1, 'Draxon SA-22', 'drax22',   'Epsilon Laboratories', 2129, 12,  80,  3055555, 'INTERCEPTOR', 'SPACECRAFT', 1),
-(2, 'Cygnia F35',   'cygf35',   'Cygnia Corporation',   2157, 219, 456, 4550000, 'FIGHTER',     'SPACECRAFT', 2),
-(3, 'Hammerhead 2', 'hamm2',    'Cygnia Corporation',   2157, 219, 456, 2999999, 'SCOUT',       'SPACECRAFT', 3),
-(4, 'Vanguard SAR', 'vanguard', 'Cygnia Corporation',   2157, 219, 456, 1900000, 'BOMBER',      'SPACECRAFT', 4),
-(5, 'Tellus R X5',  'tellrx5',  'Cygnia Corporation',   2157, 219, 456, 5000000, 'SUPPORT',     'SPACECRAFT', 5);
+INSERT INTO spacecrafts (id, name, spacecraft_registry, manufacturer, manufactured, height, length, price, type, store_type, speed, hull, shield, damage, manuvrability) VALUES
+(1, 'Draxon SA-22', 'drax22',   'Epsilon Laboratories', 2129, 12,  80,  3055555, 'INTERCEPTOR', 'SPACECRAFT', 10,  30,  80,  60,  80),
+(2, 'Cygnia F35',   'cygf35',   'Cygnia Corporation',   2157, 219, 456, 4550000, 'FIGHTER',     'SPACECRAFT', 60,  50,  10,  0,   50),
+(3, 'Hammerhead 2', 'hamm2',    'Cygnia Corporation',   2157, 219, 456, 2999999, 'SCOUT',       'SPACECRAFT', 100, 20,  10,  10,  30),
+(4, 'Vanguard SAR', 'vanguard', 'Cygnia Corporation',   2157, 219, 456, 1900000, 'BOMBER',      'SPACECRAFT', 30,  120, 110, 200, 10),
+(5, 'Tellus R X5',  'tellrx5',  'Cygnia Corporation',   2157, 219, 456, 5000000, 'SUPPORT',     'SPACECRAFT', 60,  90,  80,  0,   10);
 
 INSERT INTO spacecraft_upgrade (id, name, upgrade_registry, spacecraft_registry, manufacturer, price, type, gain) VALUES
 (1,  'Gentec FF Fieler',             'drax22_stabilizer',   'drax22',   'Gentech MIL Corp.',  100000, 'STABILIZER', 24),

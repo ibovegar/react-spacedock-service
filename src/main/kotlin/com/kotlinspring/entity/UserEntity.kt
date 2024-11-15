@@ -13,9 +13,3 @@ data class UserEntity(
     @OneToMany(mappedBy = "user")
     val userSpacerafts: List<UserSpacecraftEntity> = mutableListOf()
 )
-
-// TODO: Move to User service
-fun UserEntity.toUserDTO() = UserDTO(
-    id = this.id,
-    name = this.name,
-)

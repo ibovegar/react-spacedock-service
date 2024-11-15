@@ -1,10 +1,8 @@
 package com.kotlinspring.service
 
 import com.kotlinspring.dto.SpacecraftDTO
-import com.kotlinspring.dto.SpacecraftStatsDTO
 import com.kotlinspring.dto.UserSpacecraftDTO
 import com.kotlinspring.entity.UserSpacecraftEntity
-import com.kotlinspring.entity.toSpacecraftDTO
 import com.kotlinspring.repository.SpacecraftRepository
 import com.kotlinspring.repository.UserRepository
 import com.kotlinspring.repository.UserSpacecraftRepository
@@ -61,14 +59,11 @@ class UserSpacecraftService(
             price = entity.spacecraft.price,
             type = entity.spacecraft.type,
             storeType = entity.spacecraft.storeType,
-            baseStats = SpacecraftStatsDTO(
-                id = entity.spacecraft.baseStats.id,
-                speed = entity.spacecraft.baseStats.speed,
-                damage = entity.spacecraft.baseStats.damage,
-                manuvrability = entity.spacecraft.baseStats.manuvrability,
-                shield = entity.spacecraft.baseStats.shield,
-                hull = entity.spacecraft.baseStats.hull
-            )
+            speed = entity.spacecraft.speed,
+            damage = entity.spacecraft.damage,
+            manuvrability = entity.spacecraft.manuvrability,
+            shield = entity.spacecraft.shield,
+            hull = entity.spacecraft.hull
         )
     )
 }

@@ -1,6 +1,5 @@
 package com.kotlinspring.entity
 
-import com.kotlinspring.dto.SpacecraftUpgradeDTO
 import jakarta.persistence.*
 
 enum class SpacecraftUpgradeType {
@@ -18,16 +17,4 @@ data class SpacecraftUpgradeEntity(
     val price: Int,
     @Enumerated(value = EnumType.STRING) var type: SpacecraftUpgradeType,
     val gain: Int
-)
-
-// TODO: Move to Spacecraft upgrade service
-fun SpacecraftUpgradeEntity.toSpacecraftUpgradeDTO() = SpacecraftUpgradeDTO(
-    id = this.id,
-    name = this.name,
-    upgradeRegistry = this.upgradeRegistry,
-    manufacturer = this.manufacturer,
-    spacecraftRegistry = this.spacecraftRegistry,
-    price = this.price,
-    type = this.type,
-    gain = this.gain
 )

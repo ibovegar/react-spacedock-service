@@ -14,8 +14,11 @@ data class SpacecraftDTO(
     val price: Int,
     val type: SpacecraftType,
     val storeType: StoreType,
-    val baseStats: SpacecraftStatsDTO?
-    //val attachedUpgrades: string[];
+    val speed: Int,
+    val hull: Int,
+    val shield: Int,
+    val damage: Int,
+    val manuvrability: Int,
 )
 
 
